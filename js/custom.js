@@ -4,5 +4,5 @@ menuBtn.addEventListener('click', function(){
     let menu = document.querySelector('.menu');
     this.classList.toggle('active');
     menu.classList.toggle('active');
-    document.body.classList.toggle('bg');
+    // document.body.classList.toggle('bg');
 });
