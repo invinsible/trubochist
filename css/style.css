@@ -112,6 +112,7 @@ body {
   background-size: auto, 90%;
   background-position: 0 0, 950px 0;
   background-color: #0D0D0D;
+  background-color: #000;
 }
 
 h1 {
@@ -124,9 +125,37 @@ h1 span {
   color: #EECA8C;
 }
 
+.bg-main {
+  background: url("../img/bg_main-left.png") no-repeat;
+}
+
+.h2-title {
+  position: relative;
+  margin-bottom: 105px;
+  font-size: 48px;
+  line-height: 1.5;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.h2-title::after {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  content: '';
+  width: 165px;
+  height: 3px;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(239, 203, 142, 0)), color-stop(48.44%, #EFCB8E), to(rgba(239, 203, 142, 0)));
+  background: linear-gradient(270deg, rgba(239, 203, 142, 0) 0%, #EFCB8E 48.44%, rgba(239, 203, 142, 0) 100%);
+}
+
 .container {
+  padding: 0 20px;
   margin: 0 auto;
-  max-width: 1140px;
+  max-width: 1180px;
 }
 
 .burger {
@@ -194,6 +223,10 @@ h1 span {
 
 .btn:active {
   border-bottom: 0;
+}
+
+.p150 {
+  padding: 100px 0 150px;
 }
 
 /* End Global */
@@ -377,10 +410,6 @@ h1 span {
   }
 }
 
-.promo {
-  padding-top: 100px;
-}
-
 .promo h1 {
   margin-bottom: 80px;
   max-width: 800px;
@@ -394,8 +423,8 @@ h1 span {
 }
 
 .promo__item {
-  max-width: 170px;
   margin-right: 36px;
+  max-width: 170px;
 }
 
 .promo__img {
@@ -424,5 +453,41 @@ h1 span {
 .promo__link:hover .promo__img {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+.about {
+  background: url("../img/bg_about_home.png") no-repeat, url("../img/bg_about.png") no-repeat;
+  background-position: 90% center, left 30%;
+}
+
+.about__list {
+  max-width: 724px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about__item {
+  width: 215px;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 300;
+  color: #fff;
+}
+
+.about__item:first-child {
+  margin-bottom: 105px;
+}
+
+.about__sub-title {
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 500;
+  color: #EFCB8E;
 }
 /*# sourceMappingURL=style.css.map */
