@@ -201,7 +201,7 @@ h1 span {
 }
 
 .btn {
-  padding: 25px 45px;
+  padding: 14px 45px;
   display: inline-block;
   font-size: 20px;
   line-height: 20px;
@@ -415,6 +415,10 @@ h1 span {
   max-width: 800px;
 }
 
+.promo__btn {
+  padding: 25px 45px;
+}
+
 .promo__service {
   margin-bottom: 50px;
   display: -webkit-box;
@@ -489,5 +493,98 @@ h1 span {
   line-height: 1;
   font-weight: 500;
   color: #EFCB8E;
+}
+
+.main-news {
+  text-align: center;
+}
+
+.main-news__list {
+  margin-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-news__item {
+  width: 30%;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.main-news__img {
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+}
+
+.main-news__link {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #fff;
+  text-align: left;
+  letter-spacing: 0.04em;
+}
+
+.main-news__link:hover .main-news__img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.main-news__link:hover .main-news__arrow::after {
+  margin-left: 15px;
+}
+
+.main-news__arrow {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 400;
+  color: #FFD183;
+}
+
+.main-news__arrow::after {
+  content: '';
+  margin-left: 12px;
+  width: 10px;
+  height: 5px;
+  display: block;
+  background-image: url("../img/arrow.png");
+  -webkit-transition: margin-left 0.25s;
+  transition: margin-left 0.25s;
+}
+
+.main-news__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 30px 25px 30px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(3, 3, 3, 0)), to(#030303));
+  background: linear-gradient(180deg, rgba(3, 3, 3, 0) 0%, #030303 100%);
 }
 /*# sourceMappingURL=style.css.map */

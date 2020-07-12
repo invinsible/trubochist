@@ -204,7 +204,7 @@ h1 {
 }
 
 .btn {
-    padding: 25px 45px;
+    padding: 14px 45px;
     display: inline-block;
     font-size: 20px;
     line-height: 20px;
@@ -255,9 +255,6 @@ h1 {
     }
 }
 
-.wrapper {
-    
-}
 
 .header {   
     position: relative;     
@@ -387,6 +384,10 @@ h1 {
         max-width: 800px;
     }
 
+    &__btn {
+        padding: 25px 45px;
+    }
+
     &__service {
         margin-bottom: 50px;
         display: flex;        
@@ -450,5 +451,84 @@ h1 {
         line-height: 1;
         font-weight: 500;
         color: #EFCB8E;
+    }
+}
+
+.main-news {
+    text-align: center;
+
+    &__list {
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: 30%;        
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    &__img {
+        transition: transform $tr-time;
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 300;
+        color: #fff;
+        text-align: left;
+        letter-spacing: 0.04em;
+
+        &:hover {
+
+            .main-news__img {
+                transform: scale(1.05);
+            }
+
+            .main-news__arrow::after {
+                margin-left: 15px;
+            }
+        }
+    }
+
+    &__arrow {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        line-height: 1;
+        font-weight: 400;
+        color: #FFD183;        
+
+        &::after {
+            content: '';
+            margin-left: 12px;
+            width: 10px;
+            height: 5px;
+            display: block;
+            background-image: url('../img/arrow.png');
+            transition: margin-left $tr-time;
+        }
+    }
+
+    &__wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0 30px 25px 30px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background: linear-gradient(180deg, rgba(3, 3, 3, 0) 0%, #030303 100%);
+    }  
+    
+    &__btn {
+
     }
 }
