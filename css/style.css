@@ -152,10 +152,34 @@ h1 span {
   background: linear-gradient(270deg, rgba(239, 203, 142, 0) 0%, #EFCB8E 48.44%, rgba(239, 203, 142, 0) 100%);
 }
 
+.h2-title--left {
+  max-width: 266px;
+  margin-bottom: 70px;
+  text-align: left;
+}
+
+.h2-title--left::after {
+  lefT: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  background: -webkit-gradient(linear, right top, left top, from(rgba(239, 203, 142, 0)), to(#EFCB8E));
+  background: linear-gradient(270deg, rgba(239, 203, 142, 0) 0%, #EFCB8E 100%);
+}
+
 .container {
   padding: 0 20px;
   margin: 0 auto;
   max-width: 1180px;
+}
+
+.container--team {
+  max-width: 1620px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .burger {
@@ -225,8 +249,8 @@ h1 span {
   border-bottom: 0;
 }
 
-.p150 {
-  padding: 100px 0 150px;
+.p100 {
+  padding: 100px 0 35px;
 }
 
 /* End Global */
@@ -410,6 +434,10 @@ h1 span {
   }
 }
 
+.promo {
+  padding-bottom: 150px;
+}
+
 .promo h1 {
   margin-bottom: 80px;
   max-width: 800px;
@@ -586,5 +614,53 @@ h1 span {
           justify-content: flex-end;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(3, 3, 3, 0)), to(#030303));
   background: linear-gradient(180deg, rgba(3, 3, 3, 0) 0%, #030303 100%);
+}
+
+.partners__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.partners__item {
+  padding: 15px;
+  width: 20%;
+  height: 105px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.partners__item img {
+  opacity: 0.4;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+
+.partners__item:hover img {
+  opacity: 1;
+}
+
+.team__left {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 300;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.team__right {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
 /*# sourceMappingURL=style.css.map */
