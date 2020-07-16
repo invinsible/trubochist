@@ -1,11 +1,11 @@
-// const menuBtn = document.querySelector('.menu-btn');
+const menuBtn = document.querySelector('.mobile-menu-btn');
 
-// menuBtn.addEventListener('click', function(){
-//     let menu = document.querySelector('.menu-wrapper');
-//     this.classList.toggle('active');
-//     menu.classList.toggle('active');
-//     // document.body.classList.toggle('bg');
-// });
+menuBtn.addEventListener('click', function(){
+    let menu = document.querySelector('.page-nav__mob-wrapper');
+    this.classList.toggle('active');
+    menu.classList.toggle('active');
+    // document.body.classList.toggle('bg');
+});
 
 // $('.owl-carousel').owlCarousel({
 //     loop:true,

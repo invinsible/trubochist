@@ -206,7 +206,7 @@ h1 span {
 
 .burger {
   position: absolute;
-  top: 42%;
+  lefT: 0;
   display: block;
   width: 100%;
   height: 4px;
@@ -277,20 +277,52 @@ h1 span {
 
 /* End Global */
 .mobile-tel {
+  padding: 20px 15px;
   display: none;
+  font-size: 18px;
+  color: #fff;
+  border-bottom: 2px solid rgba(229, 229, 229, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .mobile-tel {
+    display: block;
+  }
 }
 
 .mobile-menu-btn {
+  position: relative;
   margin-left: 20px;
+  width: 42px;
+  height: 42px;
   display: none;
+  border: 0;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
 }
 
 .mobile-menu-btn.active {
   position: absolute;
   right: 20px;
-  top: 20px;
-  background-color: #EECA8C;
+  top: 5px;
   z-index: 3;
+}
+
+.mobile-menu-btn.active .burger {
+  background-color: transparent;
+}
+
+.mobile-menu-btn.active .burger::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.mobile-menu-btn.active .burger::after {
+  top: 0;
+  -webkit-transform: rotate(145deg);
+          transform: rotate(145deg);
 }
 
 @media (max-width: 1024px) {
@@ -334,10 +366,6 @@ h1 span {
   right: 0;
 }
 
-.page-nav__mob-wrapper.active .mobile-tel {
-  display: block;
-}
-
 @media (max-width: 1366px) {
   .page-nav__mob-wrapper {
     width: 760px;
@@ -348,17 +376,18 @@ h1 span {
   .page-nav__mob-wrapper {
     position: fixed;
     top: 0;
-    right: -40%;
-    width: 40%;
+    right: -50%;
+    padding: 0;
+    width: 50%;
     height: 100%;
-    background-color: #ccc;
+    background-color: #0D0D0D;
     -webkit-transition: right 0.25s;
     transition: right 0.25s;
     z-index: 3;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   .page-nav__mob-wrapper {
     width: 100%;
     right: -100%;
@@ -369,9 +398,12 @@ h1 span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-@media (max-width: 1195px) {
+@media (min-width: 1024px) and (max-width: 1195px) {
   .page-nav__right {
     display: none;
   }
@@ -395,7 +427,7 @@ h1 span {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   .page-nav__tel {
     display: none;
   }
@@ -469,11 +501,18 @@ h1 span {
 .menu__item.haveSub::after {
   position: absolute;
   right: -10px;
-  top: 12px;
+  top: 10px;
   content: '';
-  width: 12px;
-  height: 12px;
-  background-color: red;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
 }
 
 .menu__item:hover .menu__sub {
@@ -481,7 +520,8 @@ h1 span {
 }
 
 .menu__item:hover::after {
-  background-color: green;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .menu__link {
@@ -504,11 +544,19 @@ h1 span {
   }
 }
 
+@media (max-width: 1024px) {
+  .menu__link {
+    padding: 15px;
+    font-weight: 400;
+  }
+}
+
 .menu__sub {
   padding: 15px 0 !important;
   display: none;
   position: absolute;
   background-color: #030303;
+  z-index: 10;
 }
 
 .menu__sub a {
@@ -516,6 +564,7 @@ h1 span {
   min-width: 365px;
   display: block;
   color: #fff;
+  font-size: 0.9em;
   font-weight: 300;
   -webkit-transition: color 0.25s, background-color 0.25s;
   transition: color 0.25s, background-color 0.25s;
@@ -524,6 +573,18 @@ h1 span {
 .menu__sub a:hover {
   background-color: #2f2f2f;
   color: #EECA8C;
+}
+
+@media (max-width: 1024px) {
+  .menu__sub a {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .menu__sub {
+    width: 100%;
+  }
 }
 
 .menu__tel {

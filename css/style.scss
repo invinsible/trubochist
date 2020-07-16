@@ -203,16 +203,16 @@ h1 {
 
 .burger {
     position: absolute; 
-    top: 42%;      
+    lefT: 0;     
     display: block;
     width: 100%;
     height: 4px;
     transition: $tr-time;
-    background-color: #808080;    
+    background-color: #808080;
 
     &::before,
     &::after {
-        position: absolute;           
+        position: absolute;                
         content: '';   
         display: block;
         width: 100%;
@@ -269,19 +269,47 @@ h1 {
 .mobile {
 
     &-tel {
+        padding: 20px 15px;
         display: none;
+        font-size: 18px;
+        color: #fff;
+        border-bottom: 2px solid rgba(229, 229, 229, 0.1);
+
+        @media(max-width: 1024px) {
+            display: block;
+        }
     }
 
     &-menu-btn {
+        position: relative;
         margin-left: 20px;
+        width: 42px;
+        height: 42px;
         display: none;
+        border: 0;
+        background: transparent;
+        outline: none;
+        cursor: pointer;
 
         &.active {
             position: absolute;
             right: 20px;
-            top: 20px;
-            background-color: $gold-color;
+            top: 5px;            
             z-index: 3;
+
+            .burger {
+                background-color: transparent;
+
+                &::before {
+                    top: 0;
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    top: 0;
+                    transform: rotate(145deg);
+                }
+            }
         }
 
         @media (max-width: 1024px) {
@@ -314,12 +342,8 @@ h1 {
     
         &.active {        
             right: 0;        
-        }        
-    
-        &.active .mobile-tel {
-            display: block;
         }
-        
+
         @media (max-width: 1366px) {
             width: 760px;
         }
@@ -327,15 +351,16 @@ h1 {
         @media (max-width: 1024px) { 
             position: fixed;
             top: 0;
-            right: -40%;
-            width: 40%;
+            right: -50%;
+            padding: 0;
+            width: 50%;
             height: 100%;        
-            background-color: #ccc;
+            background-color: #0D0D0D;
             transition: right $tr-time;
             z-index: 3;
         }
     
-        @media (max-width: 450px) {
+        @media (max-width: 550px) {
             width: 100%;
             right: -100%;
         }         
@@ -343,8 +368,9 @@ h1 {
 
     &__right {
         display: flex;
+        align-items: center;
 
-        @media (max-width: 1195px) {
+        @media (min-width: 1024px) and (max-width: 1195px){
             display: none;
         } 
     }
@@ -363,7 +389,7 @@ h1 {
             font-size: 15px;
         }        
 
-        @media (max-width: 450px) {
+        @media (max-width: 550px) {
             display: none;
         }
     } 
@@ -423,11 +449,14 @@ h1 {
             &::after {
                 position: absolute;
                 right: -10px;
-                top: 12px;
+                top: 10px;
                 content: '';
-                width: 12px;
-                height: 12px;
-                background-color: red;
+                border: solid #fff;
+                border-width: 0 2px 2px 0;
+                display: inline-block;
+                padding: 3px;
+                transform: rotate(45deg);
+                transition: transform $tr-time;
             }
         }
 
@@ -437,7 +466,7 @@ h1 {
             }
 
             &::after {
-                background-color: green;
+                transform: rotate(-45deg);
             }
         }
         
@@ -458,19 +487,26 @@ h1 {
         @media (max-width: 1366px) {
             font-size: 16px;
         }
+
+        @media(max-width: 1024px) {
+            padding: 15px;
+            font-weight: 400;
+        }
     }
 
     &__sub {
         padding: 15px 0!important;
         display: none;
         position: absolute;
-        background-color: #030303;        
+        background-color: #030303;
+        z-index: 10;        
 
-        a{
+        a {
             padding: 10px 20px; 
             min-width: 365px;
             display: block;
             color: #fff;
+            font-size: 0.9em;
             font-weight: 300;
             transition: color $tr-time, background-color $tr-time;
 
@@ -478,6 +514,14 @@ h1 {
                 background-color: #2f2f2f;
                 color: $gold-color;
             }
+
+            @media(max-width: 1024px) {
+                min-width: auto;
+            }
+        }
+
+        @media(max-width: 1024px) {
+            width: 100%;
         }
     }
 
