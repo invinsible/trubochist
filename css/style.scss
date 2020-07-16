@@ -70,7 +70,8 @@ dd {
 }
 
 a {    
-    text-decoration: none;    
+    text-decoration: none; 
+    color: #fff;
 }
 
 ul[class],
@@ -262,6 +263,12 @@ h1 {
 
 .p100 {
     padding: 100px 0 35px;
+}
+
+.gray-text {
+    font-size: 14px;
+    font-weight: 300;
+    color: #808080;
 }
 
 /* End Global */
@@ -1002,4 +1009,75 @@ h1 {
 .footer {
     padding: 40px 0;
     border-top: 1px solid #fff;
+
+    .logo {
+        margin-bottom: 50px;
+    }
+
+    &__wrapper {
+        padding-bottom: 50px;
+    }
+
+    &__contacts {
+        a {    
+            display: block;                 
+            color: #fff;
+            font-weight: 300;
+            transition: color $tr-time;
+
+            &:hover {
+                color: $gold-color;
+            }
+        }
+    }
+
+    &__phone {
+        margin-bottom: 25px;
+        font-size: 24px;
+    }
+
+    &__email {
+        margin-bottom: 50px;
+        font-size: 18px;
+    }
+
+        
+}
+
+.social {
+    margin-bottom: 40px;
+    display: flex;
+
+    &__link {
+        padding: 7px;
+        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+        display: block;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        transition: opacity $tr-time;
+
+        img {
+            margin: auto;
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+.copyright {
+    a {
+        margin-left: 40px;
+        color: #808080;
+        border-bottom: 1px solid;
+        transition: all $tr-time;
+
+        &:hover {
+            color: $gold-color;
+            border-color: transparent;
+        }
+    }
 }

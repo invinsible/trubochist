@@ -67,6 +67,7 @@ dd {
 
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 ul[class],
@@ -273,6 +274,12 @@ h1 span {
 
 .p100 {
   padding: 100px 0 35px;
+}
+
+.gray-text {
+  font-size: 14px;
+  font-weight: 300;
+  color: #808080;
 }
 
 /* End Global */
@@ -1120,5 +1127,75 @@ h1 span {
 .footer {
   padding: 40px 0;
   border-top: 1px solid #fff;
+}
+
+.footer .logo {
+  margin-bottom: 50px;
+}
+
+.footer__wrapper {
+  padding-bottom: 50px;
+}
+
+.footer__contacts a {
+  display: block;
+  color: #fff;
+  font-weight: 300;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+.footer__contacts a:hover {
+  color: #EECA8C;
+}
+
+.footer__phone {
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.footer__email {
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+
+.social {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social__link {
+  padding: 7px;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  display: block;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+
+.social__link img {
+  margin: auto;
+}
+
+.social__link:hover {
+  opacity: 0.7;
+}
+
+.copyright a {
+  margin-left: 40px;
+  color: #808080;
+  border-bottom: 1px solid;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.copyright a:hover {
+  color: #EECA8C;
+  border-color: transparent;
 }
 /*# sourceMappingURL=style.css.map */
