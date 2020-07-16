@@ -274,16 +274,21 @@ h1 {
         font-size: 18px;
         color: #fff;
         border-bottom: 2px solid rgba(229, 229, 229, 0.1);
+        transition: color $tr-time;
 
         @media(max-width: 1024px) {
             display: block;
+        }
+
+        &:hover {
+            color: $gold-color;
         }
     }
 
     &-menu-btn {
         position: relative;
         margin-left: 20px;
-        width: 42px;
+        width: 35px;
         height: 42px;
         display: none;
         border: 0;
@@ -457,13 +462,19 @@ h1 {
                 padding: 3px;
                 transform: rotate(45deg);
                 transition: transform $tr-time;
+
+                @media (max-width: 1024px) {
+                    right: 20px;
+                }
             }
         }
 
         &:hover {
-            .menu__sub {
-                display: block;
-            }
+            @media(min-width: 1025px) {
+                .menu__sub {
+                    display: block;
+                }
+            }           
 
             &::after {
                 transform: rotate(-45deg);
@@ -521,6 +532,8 @@ h1 {
         }
 
         @media(max-width: 1024px) {
+            position: relative;
+            padding: 0!important;
             width: 100%;
         }
     }

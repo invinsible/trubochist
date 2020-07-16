@@ -4,25 +4,18 @@ menuBtn.addEventListener('click', function(){
     let menu = document.querySelector('.page-nav__mob-wrapper');
     this.classList.toggle('active');
     menu.classList.toggle('active');
-    // document.body.classList.toggle('bg');
 });
 
-// $('.owl-carousel').owlCarousel({
-//     loop:true,
-//     margin:10,
-//     nav:true,
-//     responsive:{
-//         0:{
-//             items:1
-//         },
-//         600:{
-//             items:3
-//         },
-//         1000:{
-//             items:5
-//         }
-//     }
-// })
+
+if ( $(window).width() < 1024 ) {
+    $('.haveSub > .menu__link').click(function(e){
+      e.preventDefault();
+           
+      $(this).next('.menu__sub').slideToggle(350);
+    })
+}
+
+
 
 
 $(function() {
