@@ -10,7 +10,7 @@
 </head>
 <body class="main-page">    
     <header class="header">
-        <nav class="page-nav page-nav--main">
+        <nav class="page-nav page-nav--main" id="menu">
             <a class="logo" href="/">
                 <img class="logo__img" src="./img/logo.png" alt="Логотип Трубочист Alex">
                 <p class="logo__title">Трубочист Alex <span>услуги премиум класса</p>
@@ -21,14 +21,45 @@
                     <li class="menu__item">
                         <a class="menu__link" href="#">Главная</a>
                     </li>
-                    <li class="menu__item">
+                    <li class="menu__item haveSub">
                         <a class="menu__link" href="#">Услуги</a>
+                        <ul class="menu__sub">
+                            <li>
+                                <a href="#">Монтаж печи</a>
+                            </li>
+                            <li>
+                                <a href="#">Монтаж каминов</a>
+                            </li>
+                            <li>
+                                <a href="#">Монтаж твердотельных котлов</a>
+                            </li>
+                            <li>
+                                <a href="#">Монтаж дымоходов и в.каналов</a>
+                            </li>
+                            <li>
+                                <a href="#">Обслуживание дымоходов и в.каналов</a>
+                            </li>
+                            <li>
+                                <a href="#">Обследование дымоходов и в.каналов</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="menu__item">
                         <a class="menu__link" href="#">Расчёт дымохода</a>
                     </li>
-                    <li class="menu__item">
+                    <li class="menu__item haveSub">
                         <a class="menu__link" href="#">Каталог товаров</a>
+                        <ul class="menu__sub">
+                            <li>
+                                <a href="#">Топки</a>
+                            </li>
+                            <li>
+                                <a href="#">Твердотельные котлы</a>
+                            </li>
+                            <li>
+                                <a href="#">Солнечные электростанции</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="menu__item">
                         <a class="menu__link" href="#">Новости</a>
@@ -74,7 +105,7 @@
         </section>             
     </header>
     
-    <main class="bg-main">        
+    <main class="bg-main" id="panel">        
         <section class="about p100">
             <div class="container">
                 <h2 class="h2-title">О Нас</h2>
@@ -190,7 +221,7 @@
                     <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст.</p>
                 </div>
                 <div class="team__right">
-                    <ul class="team__slide owl-carousel">
+                    <ul class="">
                         <li class="team__unit">
                             <div class="team__img">
                                 <img src="./img/man.png" alt="">
@@ -243,7 +274,8 @@
 
    
     <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>    
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/slideout.min.js"></script>    
     <script src="js/custom.js"></script>
 
 </body>

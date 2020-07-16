@@ -318,7 +318,11 @@ h1 {
     
         &.active .mobile-tel {
             display: block;
-        }       
+        }
+        
+        @media (max-width: 1366px) {
+            width: 760px;
+        }
     
         @media (max-width: 1024px) { 
             position: fixed;
@@ -339,6 +343,10 @@ h1 {
 
     &__right {
         display: flex;
+
+        @media (max-width: 1195px) {
+            display: none;
+        } 
     }
     
     &__tel {
@@ -351,16 +359,25 @@ h1 {
             color: $gold-color;
         }
 
+        @media (max-width: 1366px) {
+            font-size: 15px;
+        }        
+
         @media (max-width: 450px) {
             display: none;
         }
     } 
 }
 
-.logo {
-    width: 285px;
+.logo {   
     display: flex;
     align-items: center;
+
+    img {
+        @media (max-width: 1240px) {
+            width: 55px;
+        } 
+    }
 
     &__title {
         margin-left: 20px;
@@ -376,6 +393,15 @@ h1 {
             color: #D5AB66;
         }
 
+        @media (max-width: 1366px) {
+            font-size: 18px;
+        }
+
+        @media (max-width: 1235px) {
+            margin-left: 10px;
+            font-size: 16px;
+        }
+
         @media (max-width: 420px) {
             font-size: 12px;
         }
@@ -389,6 +415,34 @@ h1 {
     justify-content: space-between;
     list-style: none;
 
+    &__item {
+        position: relative;
+
+        &.haveSub {
+
+            &::after {
+                position: absolute;
+                right: -10px;
+                top: 12px;
+                content: '';
+                width: 12px;
+                height: 12px;
+                background-color: red;
+            }
+        }
+
+        &:hover {
+            .menu__sub {
+                display: block;
+            }
+
+            &::after {
+                background-color: green;
+            }
+        }
+        
+    }
+
     &__link {
         padding: 7px 13px;
         display: block;
@@ -399,6 +453,31 @@ h1 {
         
         &:hover {
             color: $gold-color;
+        }
+
+        @media (max-width: 1366px) {
+            font-size: 16px;
+        }
+    }
+
+    &__sub {
+        padding: 15px 0!important;
+        display: none;
+        position: absolute;
+        background-color: #030303;        
+
+        a{
+            padding: 10px 20px; 
+            min-width: 365px;
+            display: block;
+            color: #fff;
+            font-weight: 300;
+            transition: color $tr-time, background-color $tr-time;
+
+            &:hover {
+                background-color: #2f2f2f;
+                color: $gold-color;
+            }
         }
     }
 
@@ -763,8 +842,7 @@ h1 {
         flex-wrap: wrap;
     }
 
-    &__item {        
-        position: relative;
+    &__item {
         // padding: 15px;
         margin-right: 15px;
         margin-bottom: 15px;
@@ -774,17 +852,28 @@ h1 {
         color: #2C2C2C;
         border-radius: 3px;
         box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.107216);        
-        transform: scale(1);
-        transition: transform $tr-time;
+        // transform: scale(1);
+        // transition: transform $tr-time;
+
+        &:hover {
+            // transform: scale(1.02);
+            border-radius: 3px 3px 0px 0px;
+
+            .part2 {
+                z-index: 5;
+                visibility: visible;
+            }
+        }
 
         .part1 {
-            padding: 15px;
-            z-index: 2;
+            position: relative;
+            padding: 15px;            
         }
 
         .part2 {
             position: absolute;
-            z-index: 3;
+            z-index: 0;
+            visibility: hidden;
         }
 
         .prod-img {
@@ -840,16 +929,7 @@ h1 {
             background: linear-gradient(180deg, #FFD183 0%, #CA9C4F 100%);
             text-align: center;
             border-radius: 0px 0px 3px 3px;
-        }
-
-        &:hover {
-            transform: scale(1.02);
-            border-radius: 3px 3px 0px 0px;
-
-            .link {
-                // display: block;
-            }
-        }
+        }        
     }
 
     
