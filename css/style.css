@@ -272,6 +272,13 @@ h1 span {
   border-bottom: 0;
 }
 
+@media (max-width: 900px) {
+  .btn {
+    padding: 12px 32px;
+    font-size: 18px;
+  }
+}
+
 .p100 {
   padding: 100px 0 35px;
 }
@@ -1140,6 +1147,61 @@ h1 span {
 
 .footer__wrapper {
   padding-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+  .footer__wrapper {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer__half--mobileFix {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer__half {
+    width: 33%;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer__half {
+    width: 100%;
+  }
+}
+
+.footer__contacts {
+  font-size: 24px;
 }
 
 .footer__contacts a {
@@ -1154,14 +1216,64 @@ h1 span {
   color: #EECA8C;
 }
 
+@media (max-width: 900px) {
+  .footer__contacts {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer__contacts {
+    font-size: 24px;
+  }
+}
+
 .footer__phone {
   margin-bottom: 25px;
-  font-size: 24px;
 }
 
 .footer__email {
   margin-bottom: 50px;
-  font-size: 18px;
+  font-size: 0.75em;
+}
+
+.footer-menu {
+  margin-bottom: 25px;
+}
+
+.footer-menu a {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+.footer-menu a:hover {
+  color: #EECA8C;
+}
+
+.footer-menu__item {
+  margin-bottom: 10px;
+}
+
+.footer-menu__link {
+  padding: 7px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.footer-menu__sub {
+  margin-top: 15px;
+}
+
+.footer-menu__sub li {
+  margin-bottom: 7px;
+}
+
+.footer-menu__sub a {
+  padding: 4px 0;
+  font-size: 0.9;
+  font-weight: 300;
 }
 
 .social {
