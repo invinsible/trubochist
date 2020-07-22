@@ -318,6 +318,13 @@ h3 {
     }
 }
 
+.hide650 {
+    @media(max-width: 650px) {
+        display: none;
+    }
+    
+}
+
 .gray-text {
     font-size: 14px;
     font-weight: 300;
@@ -326,6 +333,39 @@ h3 {
 
 .center-text {
     text-align: center;
+}
+
+.shine-img {
+    position: relative;
+
+    img {
+        margin: auto;
+        position: relative!important;
+        z-index: 3;
+    }
+
+    &::after {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        content: '';
+        width: 40%;
+        height: 40%;
+        z-index: 2;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        box-shadow: 0px 0px 150px #f1ac35; 
+                       
+    }
+
+    &--big {
+
+        &::after {
+            width: 15%;
+            top: 70%;            
+        }
+    }
+
 }
 
 .sub-title {
@@ -1200,7 +1240,16 @@ h3 {
             z-index: 2;
         }
 
-        
+        &--reverse {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-around;
+
+            @media (max-width: 900px) {
+                flex-direction: row;
+            }
+        }       
 
         .txt-wrapper {
             max-width: 57%;
@@ -1590,17 +1639,42 @@ h3 {
     display: flex;
     max-width: 1000px;
     margin: 0 auto 80px;
-    justify-content: space-between;
+    justify-content: center;
 
-    &__block {  
-        min-width: 460px;      
+    &__block {
+        padding: 35px 0;
+        margin: 0 20px;  
+        min-width: 50%;      
         text-align: center;
         font-size: 24px;
         background: linear-gradient(180deg, #131313 0%, #080808 100%);
         border-radius: 3px;
 
+        &--big {
+            min-width: 80%;
+        }
+
         p {
-            padding: 30px 50px;
+            padding: 20px 50px;
+
+            @media (max-width: 650px) {  
+                padding: 20px 10px;
+            }
+        }
+
+        small {
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        @media (max-width: 1080px) {
+            min-width: 40%;
+            font-size: 18px;
+        }
+
+        @media (max-width: 650px) {  
+            margin: 0 0 30px 0;
+            padding: 20px 0;
         }
     }
 
@@ -1613,6 +1687,39 @@ h3 {
 
     &__txt {             
         font-weight: 300;
+    }
+
+    @media (max-width: 650px) {
+        margin: 0 auto 40px;  
+        flex-direction: column;
+    }
+}
+
+.clear {
+
+    &__img {        
+        min-height: 277px;        
+
+        @media(max-width: 650px) {
+            min-height: auto;
+        }
+        
+    }
+
+    &__item {
+        width: 38%!important;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.6;
+
+        @media(max-width: 650px) {
+            width: 100%!important;
+            text-align: center;
+        }
+    }
+
+    @media(max-width: 650px) {
+        margin-bottom: 40px;
     }
 }
 
