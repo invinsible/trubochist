@@ -936,6 +936,10 @@ h3 {
 
 .team {    
 
+    &__list {
+        max-width: 800px;
+    }
+
     &__left {
         font-size: 18px;
         line-height: 1.6;

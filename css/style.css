@@ -1079,6 +1079,10 @@ h3 {
   }
 }
 
+.team__list {
+  max-width: 800px;
+}
+
 .team__left {
   font-size: 18px;
   line-height: 1.6;

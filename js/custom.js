@@ -19,16 +19,10 @@ if ( $(window).width() < 1024 ) {
 
 
 $(function() {
-    $(".owl-carousel").owlCarousel({
-    center: true,
-    items:2,
+    $(".owl-carousel").owlCarousel({    
+    items:4,
     loop:true,
-    margin:10,
-    nav: true,
-    responsive:{
-        600:{
-            items:6
-        }
-    }
+    margin: 10,
+    nav: false,   
     });
 });
