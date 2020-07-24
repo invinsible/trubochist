@@ -19,9 +19,8 @@ if ( $(window).width() < 1024 ) {
 
 
 $(function() {
-    $(".owl-carousel").owlCarousel({   
-        center: true,      
-        items:2,
+    $(".owl-carousel").owlCarousel({                
+        items: 1,
         loop:true,
         dots: false,
         margin:40,
@@ -33,6 +32,10 @@ $(function() {
             1120:{                
                 items:3
             },
+            650: {
+                center: false,
+                items: 2
+            }
             
 
         }   
