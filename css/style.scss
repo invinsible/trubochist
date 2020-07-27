@@ -1172,43 +1172,7 @@ h3 {
     }
 }
 
-.filter {
-    margin-right: 50px;
-    max-width: 270px;
-    // flex: 1;
-    grid-area: filter;
-
-    &__form {
-
-        fieldset {
-            padding: 0;
-            padding-bottom: 20px;
-            margin: 0;
-            margin-bottom: 20px;
-            border: 0;
-            background: linear-gradient(180deg, #131313 0%, #080808 100%);
-            border-radius: 3px;
-        }        
-
-        label {
-            font-size: 15px;
-            font-weight: 300;
-        }
-    }
-
-    &__title {
-        padding: 30px 25px 20px 25px;
-        margin-bottom: 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        font-size: 18px;
-        text-transform: uppercase; 
-    }
-
-    &__list {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;        
-    }
+.checkbox-list {
 
     &__option {
         position: relative;
@@ -1244,9 +1208,52 @@ h3 {
         }        
     }
 
-    &-checkbox:checked + label::after {        
+    &__wrapper {
+        flex: 1;
+    }
+
+    input[type="checkbox"]:checked + label::after {        
         transform: rotate(-45deg) scale(1);
     }
+
+}
+
+.filter {
+    margin-right: 50px;
+    max-width: 270px;
+    grid-area: filter;
+
+    &__form {
+
+        fieldset {
+            padding: 0;
+            padding-bottom: 20px;
+            margin: 0;
+            margin-bottom: 20px;
+            border: 0;
+            background: linear-gradient(180deg, #131313 0%, #080808 100%);
+            border-radius: 3px;
+        }        
+
+        label {
+            font-size: 15px;
+            font-weight: 300;
+        }
+    }
+
+    &__title {
+        padding: 30px 25px 20px 25px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 18px;
+        text-transform: uppercase; 
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;        
+    }   
 
     @media (max-width: 700px) {
         margin-right: 0;
@@ -1254,8 +1261,7 @@ h3 {
     }
 }
 
-.products {
-    // flex: 2;
+.products {    
     grid-area: content;    
 
     &__list {
@@ -2207,11 +2213,19 @@ h3 {
     }
 }
 
-.detail {
+.detail {         
 
-    fieldset {
-        padding: 0;
-        border: 0;
+    &__grid {
+             
+       
+    }
+
+    &__buy {
+        
+    }
+
+    &__checkbox {
+       
     }
 
     &__title {
@@ -2220,17 +2234,47 @@ h3 {
         line-height: 1;
         font-weight: 300;
         text-transform: uppercase;
+        
     }
 
     &__sub-title {
         padding-bottom: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         font-size: 18px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     }
 }
 
 .detail-form {
+
+    fieldset {
+        padding: 0;
+        margin-bottom: 40px;
+        border: 0;
+    } 
+
+    .checkbox-list__option {
+        padding: 10px 10px 10px 27px;
+        display: flex;
+        justify-content: space-between;
+        
+        label {
+            display: block;
+            max-width: 350px;
+
+            &::before {
+                left: 0;
+            }
+            &::after {
+                left: 3px;
+            }
+        }        
+    }
+
+    .checkbox-list__option label + .select {
+        margin-top: 10px;
+    }
+    
 
     &__item {
         margin-bottom: 20px;
@@ -2240,6 +2284,28 @@ h3 {
             display: block;
             font-size: 16px;
             color:rgba(255, 255, 255, 0.7);
+        }
+    }
+
+    &__price {
+        font-size: 24px;
+        font-weight: 300;
+        text-align: right;
+        text-transform: uppercase;
+    }    
+}
+
+.delivery {   
+
+    &__item {
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+        font-weight: 300;
+
+        &:last-of-type {
+            margin-bottom: 0;
         }
     }
 }

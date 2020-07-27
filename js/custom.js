@@ -16,7 +16,8 @@ if ( $(window).width() < 1024 ) {
 }
 
 
-$('.select select').click(function(){    
+$('.select select').click(function(){
+    
     $(this).parent().toggleClass('down');
 });
 
