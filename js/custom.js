@@ -22,7 +22,17 @@ $('.select select').click(function(){
 });
 
 
+$('.tabs__body').hide();
+    $('.tabs__body:first').show();    
 
+    $('.tabs__btns button').click(function() {
+    $('.tabs__body').hide();
+    let activeTab = $(this).attr('rel');
+    $('#' + activeTab).fadeIn();
+        
+    $('.tabs__btns button').removeClass('active');
+    $(this).addClass('active');
+});
 
 
 $(function() {

@@ -98,11 +98,32 @@
             </div>
         </div>
         
-        <section class="detail">
+        <section class="detail pb120">
             <div class="container">
+                <h1 class="detail__title">Spartherm Varia Sh</h1>
                 <div class="detail__grid">                    
-                    <div class="detail__photo"></div>
-                    <h1 class="detail__title">Spartherm Varia Sh</h1>
+                    <div class="detail__photos">
+                        <div class="photo-wrapper">
+                            <div class="big-photo">
+                                <img src="../img/big-photo.png" alt="">
+                            </div>
+                        </div>
+                       
+
+                        <div class="detail__checkbox hide650">
+                            <p class="detail__sub-title">Монтаж</p>
+                            <ul class="check-list">
+                                <li>Монтаж от 29 900 руб</li>
+                                <li>Длительность от 1 дня</li>
+                                <li>Лицензия МЧС на работы</li>
+                                <li>Мастера со стажем от 6 лет</li>
+                                <li>Выезд инженера на объект бесплатно*</li>
+                                <li>Сервисное обслуживание камина</li>
+                                <li>Скидки при заказе "под ключ"</li>
+                                <li>Пожизненная гарантия на работы</li>
+                            </ul>
+                        </div>
+                    </div>                    
                     <div class="detail__buy">
                         <form class="detail-form">
                             <fieldset>
@@ -191,28 +212,31 @@
 
                             <fieldset>
                                 <p class="detail__sub-title">Цена</p>
-                                <p class="detail-form__price">321 250 руб.</p>
-                                <button class="btn" type="submit">Купить</button>
-                                <button class="show-more" type="submit">Купить с установкой</button>
+                                <p class="detail-form__price">321 250 руб.</p> 
                             </fieldset>
+
+                            <div class="detail-form__btns">
+                                <button class="btn buy-first" type="submit">Купить</button>
+                                <button class="buy-second" type="submit">Купить с установкой</button>
+                            </div>
                             
                         </form>
+                    </div>                    
+                </div>
+                <div class="tabs">
+                    <div class="tabs__btns">
+                        <button class="tabs__btn active" rel="tabDescr">Описание</button>
+                        <button class="tabs__btn" rel="tabTable">Характеристики</button>
+                        <button class="tabs__btn" rel="tabSpec">Особенности</button>
+                        <button class="tabs__btn" rel="tabDocs">Документы</button>
                     </div>
-                    <div class="detail__checkbox">
-                        <p class="detail__sub-title">Монтаж</p>
-                        <ul class="check-list">
-                            <li>Монтаж от 29 900 руб</li>
-                            <li>Длительность от 1 дня</li>
-                            <li>Лицензия МЧС на работы</li>
-                            <li>Мастера со стажем от 6 лет</li>
-                            <li>Выезд инженера на объект бесплатно*</li>
-                            <li>Сервисное обслуживание камина</li>
-                            <li>Скидки при заказе "под ключ"</li>
-                            <li>Пожизненная гарантия на работы</li>
-                        </ul>
+                    <div class="tabs__content">
+                        <div class="tabs__body" id="tabDescr"><h3>описание</h3></div>
+                        <div class="tabs__body" id="tabTable"><h3>Характеристики</h3></div>
+                        <div class="tabs__body" id="tabSpec"><h3>Особенности</h3></div>
+                        <div class="tabs__body" id="tabDocs"><h3>Документы</h3></div>
                     </div>
                 </div>
-                <div class="tabs"></div>
             </div>
         </section>
 
