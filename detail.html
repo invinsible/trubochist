@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
     <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
+    <link  href="./css/fotorama.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>    
@@ -104,9 +105,11 @@
                 <div class="detail__grid">                    
                     <div class="detail__photos">
                         <div class="photo-wrapper">
-                            <div class="big-photo">
+                            <div class="big-photo fotorama" data-nav="thumbs" data-thumbheight="96" data-thumbwidth="96" >
                                 <img src="../img/big-photo.png" alt="">
-                            </div>
+                                <img src="https://s.fotorama.io/2.jpg">
+                                <img src="https://s.fotorama.io/1.jpg">
+                            </div>                            
                         </div>
                        
 
@@ -383,7 +386,8 @@
    
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>      
+    <script src="js/jquery.fancybox.min.js"></script>    
+    <script src="js/fotorama.js"></script>  
     <script src="js/custom.js"></script>
 
 </body>
