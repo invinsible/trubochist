@@ -6,6 +6,7 @@
     <title>Главная1</title>
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>    
@@ -73,7 +74,7 @@
                 </button>
                               
             </div> 
-        </nav>                 
+        </nav>                    
     </header>
     
     <main class="bg-main">
@@ -84,42 +85,120 @@
                         <a class="breadcrumbs__link" href="#">Главная</a>
                     </li>
                     <li class="breadcrumbs__item">
-                        <a class="breadcrumbs__link active" href="#">Услуги</a>
+                        <a class="breadcrumbs__link" href="#">Каталог</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Топки</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link active" href="#">Spartherm Varia Sh</a>
                     </li>
                     
-                </ul>
+                </ul> 
             </div>
         </div>
-
-        <section class="service pb120">
+        
+        <section class="detail">
             <div class="container">
-                <h1>Услуги</h1>
-            </div>
-            <div class="grid">
-                <a class="grid__item grid--one" href="#">
-                    <h3>Монтаж дымоходов и вентканалов</h3>
-                    <p class="grid__price">от <span>40 000</span> руб</p>                   
-                </a>
-                <a class="grid__item grid--two" href="#">
-                    <h3>Обслуживание дымоходов и вентканалов</h3>
-                    <p class="grid__price">от <span>120 000</span> руб</p>                   
-                </a>
-                <a class="grid__item grid--three" href="#">
-                    <h3>Обследование дымоходов и вентканалов</h3>
-                    <p class="grid__price">от <span>15 000</span> руб</p>                   
-                </a>
-                <a class="grid__item grid--four" href="#">
-                    <h3>Монтаж печи</h3>
-                    <p class="grid__price">от <span>350 000</span> руб</p>                    
-                </a>
-                <a class="grid__item grid--five" href="#">
-                    <h3>Монтаж твердотопливных котлов</h3>
-                    <p class="grid__price">от <span>100 000</span> руб</p>                   
-                </a>
-                <a class="grid__item grid--six" href="#">
-                    <h3>Монтаж каминов</h3>
-                    <p class="grid__price">от <span>80 000</span> руб</p>                    
-                </a>
+                <div class="detail__grid">
+                    <h1 class="detail__title">Spartherm Varia Sh</h1>
+                    <div class="detail__photo"></div>
+                    <div class="detail__buy">
+                        <form class="detail-form">
+                            <fieldset>
+                                <p class="detail__sub-title">Варианты исполнения</p>
+                                <div class="detail-form__item">
+                                    <label for="">Версия</label>
+                                    <div class="select">
+                                        <select name="" id="">
+                                            <option value="">С чугунным дымосборником</option>
+                                            <option value="">С другим дымосборником</option>
+                                            <option value="">С третьим дымосборником</option>
+                                        </select>
+                                    </div>                                    
+                                </div>
+                                <div class="detail-form__item">
+                                    <label for="">Тип рамки</label>
+                                    <div class="select">
+                                        <select name="" id="">
+                                            <option value="">Монтажная рамка 50 мм. черная</option>
+                                            <option value="">Монтажная рамка 30 мм. белая</option>
+                                            <option value="">Монтажная рамка 10 мм. красная</option>
+                                        </select>
+                                    </div>                                    
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <p class="detail__sub-title">Опции</p>
+                                <ul class="r2d2">
+                                    <li>
+                                        <input class="filter-checkbox visually-hidden" type="checkbox" id="f1" checked="">
+                                        <label for="f1">Доп. грузики для подъёмного механизма дверцы </label>
+                                    </li>
+                                    <li>
+                                        <input class="filter-checkbox visually-hidden" type="checkbox" id="f2">
+                                        <label for="f2">Чёрный шамот</label>
+                                    </li>
+                                    <li>
+                                        <input class="filter-checkbox visually-hidden" type="checkbox" id="f3">
+                                        <label for="f3">Двойное остекление</label>
+                                    </li>
+                                    <li>
+                                        <input class="filter-checkbox visually-hidden" type="checkbox" id="f4">
+                                        <label for="f4">Система автоматического контроля горения EAS</label>
+                                    </li>
+                                    <li>
+                                        <input class="filter-checkbox visually-hidden" type="checkbox" id="f5">
+                                        <label for="f5">Монтажная рама</label>
+                                        <div class="select">
+                                            <select name="" id="">
+                                                <option value="">3-х сторонняя, с кантом (+17 800 руб.)</option>
+                                                <option value="">2-х сторонняя, с кантом (+11 800 руб.)</option>
+                                            </select>
+                                        </div>                                        
+                                    </li>                                    
+                                </ul>
+                            </fieldset>
+                            <fieldset>
+                                <p class="detail__sub-title">Доставка</p>
+                                <p class="delivery--item">
+                                    <span>В регионы</span>
+                                    <span>990 руб.</span>
+                                </p>
+                                <p class="delivery--item">
+                                    <span>По Московской области</span>
+                                    <span>от 990 руб.</span>
+                                </p>
+                                <p class="delivery--item">
+                                    <span>В регионы</span>
+                                    <span>от 1 990 руб.</span>
+                                </p>
+                            </fieldset>
+
+                            <fieldset>
+                                <p class="detail__sub-title">Цена</p>
+                                <p class="detail-form__price">321 250 руб.</p>
+                                <button class="btn" type="submit">Купить</button>
+                                <button class="show-more" type="submit">Купить с установкой</button>
+                            </fieldset>
+                            
+                        </form>
+                    </div>
+                    <div class="detail__checkbox">
+                        <p class="detail__sub-title">Монтаж</p>
+                        <ul class="check-list">
+                            <li>Монтаж от 29 900 руб</li>
+                            <li>Длительность от 1 дня</li>
+                            <li>Лицензия МЧС на работы</li>
+                            <li>Мастера со стажем от 6 лет</li>
+                            <li>Выезд инженера на объект бесплатно*</li>
+                            <li>Сервисное обслуживание камина</li>
+                            <li>Скидки при заказе "под ключ"</li>
+                            <li>Пожизненная гарантия на работы</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tabs"></div>
             </div>
         </section>
 
@@ -149,7 +228,7 @@
                             <a class="footer__phone" href="tel:+7 (999) 324 42 34">+7 (999) 324 42 34</a>
                             <a class="footer__email" href="mailto:example@example.ru">example@example.ru</a>
                         </div>
-                        <a href="#" class="btn">Оставить заявку</a>                        
+                        <a href="#" class="btn" data-fancybox data-src="#modal2">Оставить заявку</a>                        
                     </div>
                     <div class="footer__half">
                         <ul class="footer-menu">
@@ -188,6 +267,31 @@
                 <p class="gray-text center-text">Информация на сайте носит ознакомительный характер и не является публичной офертой</p>
             </div>
         </footer>
+
+        <div class="modal" id="modal">
+            <div class="modal__header">
+                <p class="modal__title">Консультация трубочиста</p>
+                <p class="modal_text">Заполните форму внизу и мы свяжемся с Вами в ближайшее время.</p>
+            </div>
+            <div class="modal__body">
+                <form action="#">
+                    <input type="text" placeholder="Введите ваше имя">
+                    
+                    <button class="btn" type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal" id="modal2">
+            <div class="modal__header">
+                <p class="modal__title">Оставить заявку</p>                
+            </div>
+            <div class="modal__body">
+                <form action="#">
+                    <button class="btn" type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
     </main> 
     
 
@@ -195,7 +299,7 @@
    
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script src="js/slideout.min.js"></script>    
+    <script src="js/jquery.fancybox.min.js"></script>      
     <script src="js/custom.js"></script>
 
 </body>
