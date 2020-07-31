@@ -38,20 +38,20 @@ $('.tabs__body').hide();
 $(function() {
     $(".owl-carousel").owlCarousel({                
         items: 1,
-        loop:true,
-        dots: false,
+        loop:true,       
+        nav: true,        
         margin:40,
         responsive:{
             1360:{
                 center: true,
-                items:5
+                items:5,                
             },
             1120:{                
-                items:3
+                items:3,                
             },
             650: {
                 center: false,
-                items: 2
+                items: 2,                
             }
             
 
