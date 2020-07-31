@@ -1065,8 +1065,8 @@ h3 {
     .owl-prev,
     .owl-next {
         position: relative;
-        width: 40px;
-        height: 40px;
+        width: 55px;
+        height: 55px;
         border-radius: 50%!important;
         border: 1px solid $gold-color!important;
         outline: none;
@@ -1082,27 +1082,29 @@ h3 {
     
         &::before {
             position: absolute;
-            top: 15px;
+            top: 20px;
             content: '';
             border: solid $gold-color;
             border-width: 0 3px 3px 0;
             display: block;
-            padding: 3px;
+            padding: 6px;
         }
     }
     
     .owl-prev {
-    
+        margin-left: 35px!important;
+
         &::before {        
-            left: 16px;
+            left: 22px;
             transform: rotate(135deg);
         }
     }
     
     .owl-next {
+        margin-right: 35px!important;
     
         &::before {        
-            left: 13px;
+            left: 16px;
             transform: rotate(-45deg);
         }
     }
